@@ -16,7 +16,7 @@ fun App() {
             contentAlignment = Alignment.Center
         ) {
             Text(
-                text = "Anar geydi",
+                text = "Test",
                 color = Color.White,
                 fontSize = 32.sp
             )
