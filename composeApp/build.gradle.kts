@@ -50,11 +50,11 @@ kotlin {
 }
 
 android {
-    namespace = "com.example.ilafer"
+    namespace = "com.example.calculator"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "com.example.ilafer"
+        applicationId = "com.example.calculator"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1

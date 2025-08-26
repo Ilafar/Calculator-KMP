@@ -17,7 +17,7 @@ fun App() {
         ) {
             Text(
                 text = "Test",
-                color = Color.White,
+                color = Color.Red,
                 fontSize = 32.sp
             )
         }
