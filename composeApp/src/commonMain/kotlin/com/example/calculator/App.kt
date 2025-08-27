@@ -1,25 +1,28 @@
 package com.example.calculator
 
-import androidx.compose.foundation.layout.*
-import androidx.compose.material3.*
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.unit.sp
+import androidx.compose.ui.unit.dp
+import com.example.calculator.ui.components.AppBar
+import com.example.calculator.ui.components.CalculatorPad
+import com.example.calculator.ui.components.Expression
+import com.example.calculator.ui.theme.CalculatorTheme
 
 @Composable
 fun App() {
-    MaterialTheme {
-        Box(
-            modifier = Modifier.fillMaxSize(),
-            contentAlignment = Alignment.Center
-        ) {
-            Text(
-                text = "Test",
-                color = Color.Red,
-                fontSize = 32.sp
-            )
+    CalculatorTheme {
+        Surface {
+            Column(
+                modifier = Modifier
+                    .padding(12.dp)
+            ) {
+                AppBar()
+                Expression()
+                CalculatorPad()
+            }
         }
     }
 }
