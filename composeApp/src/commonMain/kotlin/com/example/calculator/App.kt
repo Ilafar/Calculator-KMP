@@ -16,7 +16,7 @@ import com.example.calculator.ui.theme.CalculatorTheme
 fun App() {
     CalculatorTheme {
         Surface {
-            val viewModel = viewModel<CalculatorViewModel>()
+            val viewModel: CalculatorViewModel = viewModel { CalculatorViewModel() }
             val state = viewModel.state
             val expression = viewModel.expression
             val result = state.firstNumber + (state.operation?.symbol ?: "") + state.secondNumber
