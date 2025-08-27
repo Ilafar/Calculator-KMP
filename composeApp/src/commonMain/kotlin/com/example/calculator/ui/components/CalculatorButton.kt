@@ -14,7 +14,7 @@ import androidx.compose.ui.unit.sp
 fun CalculatorButton(
     symbol: String,
     modifier: Modifier,
-    textSize: TextUnit = 24.sp,
+    textSize: TextUnit = 36.sp,
     textColor: Color = MaterialTheme.colorScheme.onPrimary,
     onClick: () -> Unit
 ){

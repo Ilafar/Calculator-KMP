@@ -13,6 +13,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.sp
 import calculator.composeapp.generated.resources.Res
 import calculator.composeapp.generated.resources.ic_history
 import calculator.composeapp.generated.resources.ic_theme
@@ -34,6 +35,7 @@ fun AppBar(){
         }
         Text(
             text = "Calculator",
+            fontSize = 24.sp,
             color = MaterialTheme.colorScheme.onSecondary
         )
         Button(

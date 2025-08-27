@@ -32,7 +32,7 @@ fun CalculatorPad() {
             CalculatorButton(
                 symbol = "AC",
                 modifier = Modifier.weight(1f),
-                textSize = 15.sp,
+                textSize = 24.sp,
                 textColor = deleteColor,
                 onClick = {}
             )

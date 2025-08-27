@@ -25,11 +25,11 @@ fun Expression(){
         Text(
             text = "1 + 2",
             color = Color(lightGray),
-            fontSize = 12.sp
+            fontSize = 21.sp
         )
         Text(
             text = "3",
-            fontSize = 40.sp
+            fontSize = 49.sp
         )
     }
 }
