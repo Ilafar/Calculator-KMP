@@ -13,9 +13,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.calculator.CalculatorAction
+import com.example.calculator.CalculatorOperation
+import com.example.calculator.ExpressionState
 
 @Composable
-fun CalculatorPad() {
+fun CalculatorPad(state: ExpressionState, onAction: (CalculatorAction) -> Unit) {
     val buttonSpacing = 8.dp
     val operationColor = MaterialTheme.colorScheme.onSecondary
     val deleteColor = MaterialTheme.colorScheme.onBackground
@@ -34,25 +37,33 @@ fun CalculatorPad() {
                 modifier = Modifier.weight(1f),
                 textSize = 24.sp,
                 textColor = deleteColor,
-                onClick = {}
+                onClick = {
+                    onAction(CalculatorAction.Clear)
+                }
             )
             CalculatorButton(
                 symbol = "⌫",
                 modifier = Modifier.weight(1f),
                 textColor = deleteColor,
-                onClick = {}
+                onClick = {
+                    onAction(CalculatorAction.Delete)
+                }
             )
             CalculatorButton(
                 symbol = "%",
                 modifier = Modifier.weight(1f),
                 textColor = operationColor,
-                onClick = {}
+                onClick = {
+                    onAction(CalculatorAction.Operation(CalculatorOperation.Percentage))
+                }
             )
             CalculatorButton(
                 symbol = "÷",
                 modifier = Modifier.weight(1f),
                 textColor = operationColor,
-                onClick = {}
+                onClick = {
+                    onAction(CalculatorAction.Operation(CalculatorOperation.Divide))
+                }
             )
         }
         Row(
@@ -61,23 +72,31 @@ fun CalculatorPad() {
             CalculatorButton(
                 symbol = "7",
                 modifier = Modifier.weight(1f),
-                onClick = {}
+                onClick = {
+                    onAction(CalculatorAction.Number(7))
+                }
             )
             CalculatorButton(
                 symbol = "8",
                 modifier = Modifier.weight(1f),
-                onClick = {}
+                onClick = {
+                    onAction(CalculatorAction.Number(8))
+                }
             )
             CalculatorButton(
                 symbol = "9",
                 modifier = Modifier.weight(1f),
-                onClick = {}
+                onClick = {
+                    onAction(CalculatorAction.Number(9))
+                }
             )
             CalculatorButton(
                 symbol = "×",
                 modifier = Modifier.weight(1f),
                 textColor = operationColor,
-                onClick = {}
+                onClick = {
+                    onAction(CalculatorAction.Operation(CalculatorOperation.Multiply))
+                }
             )
         }
         Row(
@@ -86,23 +105,31 @@ fun CalculatorPad() {
             CalculatorButton(
                 symbol = "4",
                 modifier = Modifier.weight(1f),
-                onClick = {}
+                onClick = {
+                    onAction(CalculatorAction.Number(4))
+                }
             )
             CalculatorButton(
                 symbol = "5",
                 modifier = Modifier.weight(1f),
-                onClick = {}
+                onClick = {
+                    onAction(CalculatorAction.Number(5))
+                }
             )
             CalculatorButton(
                 symbol = "6",
                 modifier = Modifier.weight(1f),
-                onClick = {}
+                onClick = {
+                    onAction(CalculatorAction.Number(6))
+                }
             )
             CalculatorButton(
                 symbol = "-",
                 textColor = operationColor,
                 modifier = Modifier.weight(1f),
-                onClick = {}
+                onClick = {
+                    onAction(CalculatorAction.Operation(CalculatorOperation.Subtract))
+                }
             )
         }
         Row(
@@ -111,23 +138,31 @@ fun CalculatorPad() {
             CalculatorButton(
                 symbol = "1",
                 modifier = Modifier.weight(1f),
-                onClick = {}
+                onClick = {
+                    onAction(CalculatorAction.Number(1))
+                }
             )
             CalculatorButton(
                 symbol = "2",
                 modifier = Modifier.weight(1f),
-                onClick = {}
+                onClick = {
+                    onAction(CalculatorAction.Number(2))
+                }
             )
             CalculatorButton(
                 symbol = "3",
                 modifier = Modifier.weight(1f),
-                onClick = {}
+                onClick = {
+                    onAction(CalculatorAction.Number(3))
+                }
             )
             CalculatorButton(
                 symbol = "+",
                 modifier = Modifier.weight(1f),
                 textColor = operationColor,
-                onClick = {}
+                onClick = {
+                    onAction(CalculatorAction.Operation(CalculatorOperation.Add))
+                }
             )
         }
         Row(
@@ -136,23 +171,31 @@ fun CalculatorPad() {
             CalculatorButton(
                 symbol = "±",
                 modifier = Modifier.weight(1f),
-                onClick = {}
+                onClick = {
+                    onAction(CalculatorAction.Operation(CalculatorOperation.Percentage))
+                }
             )
             CalculatorButton(
                 symbol = "0",
                 modifier = Modifier.weight(1f),
-                onClick = {}
+                onClick = {
+                    onAction(CalculatorAction.Number(0))
+                }
             )
             CalculatorButton(
                 symbol = ".",
                 modifier = Modifier.weight(1f),
-                onClick = {}
+                onClick = {
+                    onAction(CalculatorAction.Decimal)
+                }
             )
             CalculatorButton(
                 symbol = "=",
                 textColor = operationColor,
                 modifier = Modifier.weight(1f),
-                onClick = {}
+                onClick = {
+                    onAction(CalculatorAction.Calculate)
+                }
             )
         }
     }
